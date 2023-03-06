@@ -18,6 +18,7 @@
 
     <modules>
         <module>order-service</module>
+        <module>shared</module>
     </modules>
 
     <properties>
@@ -50,6 +51,11 @@
             <dependency>
                 <groupId>dev.thinhtpt</groupId>
                 <artifactId>order-messaging</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.thinhtpt</groupId>
+                <artifactId>shared-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

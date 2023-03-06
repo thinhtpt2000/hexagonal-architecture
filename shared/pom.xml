@@ -5,20 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dev.thinhtpt</groupId>
-        <artifactId>order-domain</artifactId>
+        <artifactId>hexagonal-architechture</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>order-domain-core</artifactId>
+    <artifactId>shared</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>shared-domain</module>
+    </modules>
 
     <properties>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>dev.thinhtpt</groupId>
-            <artifactId>shared-domain</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>
