@@ -7,6 +7,7 @@ import dev.thinhtpt.domain.valueobject.RestaurantId;
 import dev.thinhtpt.order.service.domain.dto.create.CreateOrderCommand;
 import dev.thinhtpt.order.service.domain.dto.create.CreateOrderResponse;
 import dev.thinhtpt.order.service.domain.dto.create.OrderAddress;
+import dev.thinhtpt.order.service.domain.dto.track.TrackOrderResponse;
 import dev.thinhtpt.order.service.domain.entity.Order;
 import dev.thinhtpt.order.service.domain.entity.OrderItem;
 import dev.thinhtpt.order.service.domain.entity.Product;
@@ -50,6 +51,14 @@ public class OrderDataMapper {
         return CreateOrderResponse.builder()
                 .trackingId(order.getTrackingId().getValue())
                 .orderStatus(order.getOrderStatus())
+                .build();
+    }
+
+    public TrackOrderResponse orderToTrackOrderResponse(Order order) {
+        return TrackOrderResponse.builder()
+                .orderStatus(order.getOrderStatus())
+                .trackingId(order.getTrackingId().getValue())
+                .failureMessage(order.getFailureMessages())
                 .build();
     }
 
